@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="crm_lead_view_form_inherit_info_tab" model="ir.ui.view">
+    <field name="name">crm.lead.form.inherit.info.tab</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//notebook" position="inside">
+        <page string="Información">
+          <group>
+
+            <!-- Izquierda: tabla -->
+            <group>
+              <field name="folio_ep_ids" string="Folio EP">
+                <list editable="bottom">
+                  <!-- Encabezado de columna -->
+                  <field name="name" string="ID"/>
+                </list>
+              </field>
+            </group>
+
+            <!-- Derecha: checks -->
+            <group>
+              <field name="mobiliario"/>
+              <field name="flores"/>
+              <field name="produccion"/>
+            </group>
+
+          </group>
+        </page>
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
