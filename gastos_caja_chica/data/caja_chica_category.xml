@@ -1,0 +1,5 @@
+<odoo>
+    <record id="product_category_caja_chica" model="product.category">
+        <field name="name">Caja Chica</field>
+    </record>
+</odoo>

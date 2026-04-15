@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_expense_form_inherit_caja_chica" model="ir.ui.view">
+        <field name="name">hr.expense.form.inherit.caja.chica</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- CAMPOS -->
+            <xpath expr="//sheet" position="inside">
+                <group string="Caja Chica">
+                    <field name="is_caja_chica_wallet"/>
+                    <field name="x_studio_gasto_de_caja_chica"/>
+                    <field name="x_studio_caja_chica"/>
+                     <field name="x_studio_saldo_caja_chica"/>
+                </group>
+
+                <group string="Gastos Asociados">
+                    <field name="x_studio_gasto" widget="many2many_tags"/>
+                </group>
+            </xpath>
+
+            <!-- BOTONES -->
+            <xpath expr="//header" position="inside">
+                <button name="action_balance_caja_chica"
+                        type="object"
+                        string="Balance de Caja Chica"
+                        class="btn-primary"/>
+
+                <button name="action_reajuste_caja_chica"
+                        type="object"
+                        string="Reajuste de Caja Chica"
+                        class="btn-secondary"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
